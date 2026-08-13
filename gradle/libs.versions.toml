@@ -1,5 +1,5 @@
 [versions]
-paper = "26.1.2.build+"
+paper = "1.21.11+"
 placeholderapi = "2.12.3"
 
 [libraries]

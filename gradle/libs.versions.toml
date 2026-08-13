@@ -1,7 +1,9 @@
 [versions]
 paper = "1.21.11+"
 placeholderapi = "2.12.3"
+pvpmanager = "4.0.9"
 
 [libraries]
 paper = { module = "io.papermc.paper:paper-api", version.ref = "paper" }
 placeholderapi = { module = "me.clip:placeholderapi", version.ref = "placeholderapi" }
+pvpmanager = { module = "me.chancesd.pvpmanager:pvpmanager", version.ref = "pvpmanager" }

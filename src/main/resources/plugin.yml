@@ -3,4 +3,4 @@ version: '1.0.0'
 main: org.turbojax.invisplaceholders.Main
 api-version: '1.21.4'
 author: TurboJax
-depend: [PlaceholderAPI]
+depend: [PlaceholderAPI, PvPManager]

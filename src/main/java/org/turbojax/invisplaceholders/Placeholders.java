@@ -32,20 +32,24 @@ public class Placeholders extends PlaceholderExpansion {
     }
 
     @Override
-    public String onRequest(OfflinePlayer player, @NotNull String params) {
-        UUID uuid = player.getUniqueId();
+    @Nullable
+    public String onRequest(@Nullable OfflinePlayer player, String params) {
+        if (!player.isOnline()) return null;
+
+        Player p = player.getPlayer();
+        CombatPlayer cp = CombatPlayer.get(p);
+
+        CombatPlayer enemy = cp.getEnemy();
+        if (enemy == null) return null;
 
         return switch (params.toLowerCase()) {
-            case "no_name" -> hasInvis(player) ? "" : player.getName();
-            case "fake_name" -> hasInvis(player) ? "Someone" : player.getName();
+            case "no_name" -> hasInvis(enemy.getPlayer()) ? "" : enemy.getName();
+            case "fake_name" -> hasInvis(enemy.getPlayer()) ? "Someone" : enemy.getName();
             default -> null;
         };
     }
 
-    public boolean hasInvis(OfflinePlayer player) {
-        if (!player.isOnline()) return false;
-
-        Player p = player.getPlayer();
-        return p.hasPotionEffect(PotionEffectType.INVISIBILITY);
+    public boolean hasInvis(Player player) {
+        return player.hasPotionEffect(PotionEffectType.INVISIBILITY);
     }
 }

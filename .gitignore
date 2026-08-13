@@ -1,0 +1,12 @@
+# Removes testing server
+run/
+
+# Removing build files
+bin/
+build/
+builds/
+.gradle/
+
+# Removing ide-specific configs
+.idea/
+.vscode/

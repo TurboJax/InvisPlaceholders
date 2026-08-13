@@ -1,0 +1,7 @@
+[versions]
+paper = "26.1.2.build+"
+placeholderapi = "2.12.3"
+
+[libraries]
+paper = { module = "io.papermc.paper:paper-api", version.ref = "paper" }
+placeholderapi = { module = "me.clip:placeholderapi", version.ref = "placeholderapi" }

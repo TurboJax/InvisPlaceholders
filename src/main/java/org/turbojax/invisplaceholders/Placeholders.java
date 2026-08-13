@@ -1,33 +1,27 @@
 package org.turbojax.invisplaceholders;
 
+import me.chancesd.pvpmanager.player.CombatPlayer;
 import me.clip.placeholderapi.expansion.PlaceholderExpansion;
 import org.bukkit.OfflinePlayer;
 import org.bukkit.entity.Player;
 import org.bukkit.potion.PotionEffectType;
-import org.jetbrains.annotations.NotNull;
-import org.jspecify.annotations.NonNull;
+import org.jspecify.annotations.NullMarked;
+import org.jspecify.annotations.Nullable;
 
-import java.util.UUID;
-
+@NullMarked
 public class Placeholders extends PlaceholderExpansion {
-    private final Main plugin;
-
-    public Placeholders(Main plugin) {
-        this.plugin = plugin;
-    }
-
     @Override
-    public @NonNull String getAuthor() {
+    public String getAuthor() {
         return "turbojax";
     }
 
     @Override
-    public @NonNull String getIdentifier() {
+    public String getIdentifier() {
         return "invisplaceholders";
     }
 
     @Override
-    public @NonNull String getVersion() {
+    public String getVersion() {
         return "1.0.0";
     }
 
